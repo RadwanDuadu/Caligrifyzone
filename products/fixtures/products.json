@@ -1,0 +1,152 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "cgz-ar-001",
+      "name": "Arabic Calligraphy – Bismillah Canvas",
+      "description": "Hand-crafted Arabic calligraphy featuring 'Bismillah' in elegant Thuluth style. Printed on premium cotton canvas, perfect for modern and traditional interiors.",
+      "price": 120.00,
+      "category": 1,
+      "rating": 4.8,
+      "inventory": 50,
+      "image_url": "",
+      "image": "arabic_bismillah_canvas.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "cgz-jp-001",
+      "name": "Japanese Shodō – Harmony (和) Print",
+      "description": "Minimalist Japanese Shodō artwork symbolizing harmony (和). Inspired by Zen philosophy and brushed using traditional sumi ink.",
+      "price": 85.00,
+      "category": 2,
+      "rating": 4.7,
+      "inventory": 50,
+      "image_url": "",
+      "image": "japanese_harmony_print.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "cgz-en-001",
+      "name": "Modern English Calligraphy Quote Print",
+      "description": "Contemporary English calligraphy featuring an inspirational quote. Perfect for offices, studios, and creative spaces.",
+      "price": 65.00,
+      "category": 3,
+      "rating": 4.5,
+      "inventory": 50,
+      "image_url": "",
+      "image": "english_quote_print.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "cgz-br-001",
+      "name": "Premium Bamboo Calligraphy Brush Set",
+      "description": "Set of 3 handcrafted bamboo brushes suitable for Arabic, Japanese, and modern calligraphy styles.",
+      "price": 48.99,
+      "category": 4,
+      "rating": 4.9,
+      "inventory": 50,
+      "image_url": "",
+      "image": "bamboo_brush_set.jpg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "cgz-ink-001",
+      "name": "Traditional Sumi Ink Stick",
+      "description": "Authentic Japanese sumi ink stick made for deep blacks and smooth brush flow. Ideal for professional calligraphy work.",
+      "price": 32.50,
+      "category": 5,
+      "rating": 4.8,
+      "inventory": 50,
+      "image_url": "",
+      "image": "sumi_ink_stick.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "cgz-pap-001",
+      "name": "Handmade Calligraphy Practice Paper Pad",
+      "description": "High-absorbency paper pad designed specifically for ink and brush control. Suitable for beginners and professionals.",
+      "price": 28.00,
+      "category": 6,
+      "rating": 4.6,
+      "inventory": 50,
+      "image_url": "",
+      "image": "calligraphy_practice_paper.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "cgz-prt-001",
+      "name": "Limited Edition Calligraphy Art Print",
+      "description": "Museum-quality giclée print of an original multilingual calligraphy composition (Arabic, English, Japanese).",
+      "price": 150.00,
+      "category": 7,
+      "rating": 4.9,
+      "inventory": 50,
+      "image_url": "",
+      "image": "limited_calligraphy_print.jpg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "cgz-org-001",
+      "name": "Original Handwritten Calligraphy Artwork",
+      "description": "One-of-a-kind original calligraphy artwork created by a master calligrapher. Signed and authenticated.",
+      "price": 420.00,
+      "category": 8,
+      "rating": 5.0,
+      "inventory": 50,
+      "image_url": "",
+      "image": "original_calligraphy_art.jpg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": "cgz-kit-001",
+      "name": "Beginner Calligraphy Starter Kit",
+      "description": "All-in-one starter kit including brushes, ink, practice paper, and a beginner’s guide to calligraphy.",
+      "price": 89.99,
+      "category": 9,
+      "rating": 4.7,
+      "inventory": 50,
+      "image_url": "",
+      "image": "starter_calligraphy_kit.jpg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": "cgz-kit-002",
+      "name": "Advanced Multilingual Calligraphy Kit",
+      "description": "Professional-grade kit for Arabic, English, and Japanese calligraphy enthusiasts. Includes premium tools and inks.",
+      "price": 165.00,
+      "category": 9,
+      "rating": 4.9,
+      "inventory": 50,
+      "image_url": "",
+      "image": "advanced_calligraphy_kit.jpg"
+    }
+  }
+]
