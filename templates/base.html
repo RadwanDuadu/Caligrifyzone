@@ -152,23 +152,36 @@
     {% block postloadjs %}
     
     <script>
-    $(document).ready(function () {
+    $(function () {
 
-        // Force-enable Bootstrap dropdowns
+        // Dropdowns (safe)
         $('.dropdown-toggle').dropdown();
 
-        // Optional: prevent "#" jump
         $('.dropdown-toggle').on('click', function (e) {
             e.preventDefault();
         });
 
-        // Toasts (keep this)
-        $('.toast').toast({
-            autohide: false
-        }).toast('show');
+        // Toasts — SHOW FIRST
+        $('.toast').each(function () {
+            $(this).toast({
+                autohide: false
+            }).toast('show');
+        });
+
+        // Toast dismiss — FIXED
+        $(document).on('click', '.toast .close', function () {
+            const toastEl = $(this).closest('.toast');
+            toastEl.toast('hide');
+
+            // Remove from DOM after animation
+            toastEl.on('hidden.bs.toast', function () {
+                toastEl.remove();
+            });
+        });
 
     });
     </script>
+
     
 
     {% endblock %}
