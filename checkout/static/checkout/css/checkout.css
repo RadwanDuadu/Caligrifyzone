@@ -36,6 +36,26 @@
     border: 1px solid #000;
 }
 
+select, 
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
+.country-select {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;
