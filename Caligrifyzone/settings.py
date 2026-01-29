@@ -33,7 +33,7 @@ DEBUG = os.environ.get("DEBUG", False)
 ALLOWED_HOSTS = [
     '127.0.0.1',  # VS preview
     'localhost',  # listen for stripe webhooks locally
-    'caligrifyzone-90b1cd839db0.herokuapp.com,  # heroku app
+    'caligrifyzone-90b1cd839db0.herokuapp.com',  # heroku app
 ]
 host = os.environ.get("HOST")
 CSRF_TRUSTED_ORIGINS = []
