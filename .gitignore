@@ -4,4 +4,4 @@
 __pycache__
 env.py
 .DS_Store
-library/fixtures/
+products/fixtures/
