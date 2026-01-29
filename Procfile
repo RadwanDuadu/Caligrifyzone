@@ -1,1 +1,1 @@
-web: gunicorn caligrifyzone.wsgi
+web: gunicorn caligrifyzone.wsgi:application
