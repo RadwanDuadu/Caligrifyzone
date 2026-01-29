@@ -35,11 +35,11 @@ ALLOWED_HOSTS = [
     'localhost',  # listen for stripe webhooks locally
     'caligrifyzone-90b1cd839db0.herokuapp.com',  # heroku app
 ]
-host = os.environ.get("HOST")
-CSRF_TRUSTED_ORIGINS = []
-if host:
-    ALLOWED_HOSTS.append(host)
-    CSRF_TRUSTED_ORIGINS.append(f"https://{host}")
+# host = os.environ.get("HOST")
+# CSRF_TRUSTED_ORIGINS = []
+# if host:
+#     ALLOWED_HOSTS.append(host)
+#     CSRF_TRUSTED_ORIGINS.append(f"https://{host}")
 
 # Application definition
 
