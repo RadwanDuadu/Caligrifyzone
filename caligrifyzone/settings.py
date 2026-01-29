@@ -78,6 +78,9 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
+# Optional: enable compressed/static files caching
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 ROOT_URLCONF = 'caligrifyzone.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
