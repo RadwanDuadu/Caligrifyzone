@@ -39,8 +39,7 @@ class Product(models.Model):
         ],
         help_text="Available stock (0–50)"
     )
-    image_url = CloudinaryField('image', default='placeholder')
-    image = models.ImageField(null=True, blank=True)
+    image = CloudinaryField('image', default='noimage')
 
     def __str__(self):
         return self.name
