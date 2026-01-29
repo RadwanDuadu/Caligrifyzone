@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
@@ -38,7 +39,7 @@ class Product(models.Model):
         ],
         help_text="Available stock (0–50)"
     )
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image_url = CloudinaryField('image', default='placeholder')
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
