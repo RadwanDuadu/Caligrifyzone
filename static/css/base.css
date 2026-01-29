@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: #0f0f0f;
+    /* background: #0f0f0f; */
     color: #ccc;
     font-family: 'Lato';
 }
@@ -50,6 +50,29 @@ body {
     background: whitesmoke;
     color: black;
     min-width: 260px;
+}
+
+.link {
+    color: #23BBBB;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
+}
+
+.btn-signup,
+.btn-edit {
+    background-color: #188181;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
 }
 
 .btn-black {
@@ -121,6 +144,70 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* =========================================================
+   6. FORM STYLES (Login & Signup)
+   ========================================================= */
+form.login,
+form.signup {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    color: text-black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+form.login input[type="text"],
+form.login input[type="password"],
+form.login input[type="email"],
+form.signup input[type="text"],
+form.signup input[type="password"],
+form.signup input[type="email"] {
+    background-color: #f5f5f5;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    color: #333333;
+    margin-top: 0.25rem;
+}
+
+form.login .form-label,
+form.signup .form-label {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+form.login .text-danger,
+form.signup .text-danger {
+    color: #ffb3b3;
+}
+
+form.signup .btn-signup {
+    background-color: #ffffff;
+    color: #8B5E3C;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    border-radius: 4px;
+}
+
+form.signup .btn-signup:hover {
+    background-color: #e6e6e6;
+    color: #8B5E3C;
+}
+
+form.signup a.link {
+    color: #FFD580;
+}
+
+form.signup a.link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -157,7 +244,7 @@ a.category-badge > span.badge:hover {
 }
 
 /* Convenience classes - colors copied from Bootstrap */
-/* .arrow-primary {
+.arrow-primary {
     border-bottom-color: #007bff !important;
 }
 
@@ -193,8 +280,21 @@ a.category-badge > span.badge:hover {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
-} */
+}
 
+/* Widen django-allauth pages */
+.allauth-container,
+.account-container,
+.entrance,
+.entrance-content,
+#content {
+    max-width: 100% !important;
+}
+
+.signup.card {
+    max-width: 520px;
+    margin: 0 auto;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -217,6 +317,60 @@ a.category-badge > span.badge:hover {
     .header-container {
         padding-top: 164px;
     }
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
