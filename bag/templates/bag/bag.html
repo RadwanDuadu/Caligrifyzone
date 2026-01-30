@@ -132,18 +132,31 @@
         form.submit();
     });
 
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
-        var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
-        if (size) { data['product_size'] = size; }
+    // Remove item (delegated binding)
+    $(document).on('click', '.remove-item', function(e) {
+        e.preventDefault();
+
+        const csrfToken = $('input[name="csrfmiddlewaretoken"]').first().val();
+        const itemId = $(this).attr('id').split('remove_')[1];
+        const size = $(this).data('product_size');
+
+        const url = `/bag/remove/${itemId}/`;
+
+        const data = {
+            csrfmiddlewaretoken: csrfToken,
+        };
+
+        if (size) {
+            data.product_size = size;
+        }
+
         $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
+            .done(function () {
+                location.reload();
+            })
+            .fail(function () {
+                alert('Error removing item');
+            });
     });
 </script>
 {% endblock %}
