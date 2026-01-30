@@ -60,7 +60,7 @@
 
         <!-- Featured -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link dropdown-toggle text-black"
+            <a class="logo-font font-weight-bold nav-link dropdown-toggle text-black mr-5"
                href="#"
                id="featured-link"
                role="button"
@@ -73,6 +73,24 @@
                 <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
                 <a href="{% url 'products' %}?category=custom_art" class="dropdown-item">Custom Calligraphy</a>
                 <a href="{% url 'products' %}?category=limited_edition" class="dropdown-item">Limited Editions</a>
+            </div>
+        </li>
+
+        <!-- More info -->
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link dropdown-toggle text-black mr-5"
+               href="#"
+               id="moreinfo-link"
+               role="button"
+               data-toggle="dropdown"
+               aria-haspopup="true"
+               aria-expanded="false">
+                More Info
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="moreinfo-link">
+                <a href="{% url 'about' %}" class="dropdown-item">About CaligrifyZone</a>
+                <a href="{% url 'faq' %}" class="dropdown-item">FAQs</a>
+                <a href="{% url 'newsletter' %}" class="dropdown-item">Newsletter</a>
             </div>
         </li>
 

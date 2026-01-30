@@ -8,6 +8,11 @@ body {
     font-family: 'Lato';
 }
 
+/* Ensure content starts below the fixed-top navbar */
+.main-content {
+    padding-top: 180px !important;
+}
+
 .hero-background {
     min-height: calc(100vh - 164px);
     padding-top: 164px;

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container text-black pt-5 main-content">
+  <div class="row align-items-center">
+    <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+      <img src="{% static 'images/caligrifyzone.png' %}"
+           class="img-fluid w-75"
+           alt="CaligrifyZone calligraphy artwork">
+    </div>
+
+    <div class="col-12 col-md-8">
+      <!-- Title -->
+      <h2 class="logo-font">{{ about.title }}</h2>
+
+      <!-- About content -->
+      <div class="mt-3">
+        {{ about.content|safe }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-12 text-end">
+        <p class="text-muted small mb-0">
+        <em>Last updated: {{ about.updated_on }}</em>
+        </p>
+    </div>
+  </div>
+
+  <!-- Collaboration / Contact -->
+  <div class="row justify-content-center my-5">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card review-card p-4 shadow-sm">
+        <h2 class="mb-3">Let’s collaborate</h2>
+
+        <p>
+          CaligrifyZone celebrates the art of calligraphy across cultures —
+          Arabic, Japanese, and modern expressive lettering.
+          Whether you’re an artist, designer, curator, or simply someone
+          passionate about meaningful visual art, I’d love to hear from you.
+        </p>
+
+        <p>
+          Use the form below to get in touch about collaborations, commissions,
+          exhibitions, or general enquiries.
+        </p>
+
+        <form method="post">
+          {% csrf_token %}
+          {{ contact_form|crispy }}
+          <button class="btn btn-secondary mt-3" type="submit">
+            Send message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
