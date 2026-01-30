@@ -1,5 +1,4 @@
 from django.db import models
-from django import forms
 
 
 # About model to store information about the website
@@ -36,7 +35,7 @@ class FAQ(models.Model):
         ordering = ['order']  # ensures questions display in order
 
 
-# NewsletterSubscriber model to store newsletter subscriptions    
+# NewsletterSubscriber model to store newsletter subscriptions
 class NewsletterSubscriber(models.Model):
     name = models.CharField(max_length=100)       # <- add this
     email = models.EmailField(unique=True)

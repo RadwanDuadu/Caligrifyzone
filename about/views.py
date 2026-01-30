@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .models import About, FAQ, NewsletterSubscriber
+
+from about.models import About, FAQ
 from .forms import ContactForm, NewsletterForm
 
 
@@ -13,7 +14,10 @@ def about_me(request):
             contact_form.save()
             messages.success(
                 request,
-                "Contact request received! I endeavour to respond within 2 working days."
+                (
+                    "Contact request received! "
+                    "I endeavour to respond within 2 working days."
+                )
             )
             return redirect('about')  # Prevents double submission
     else:
