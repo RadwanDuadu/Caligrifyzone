@@ -23,6 +23,6 @@ class FAQAdmin(SummernoteModelAdmin):
 
 @admin.register(NewsletterSubscriber)
 class NewsletterAdmin(admin.ModelAdmin):
-    list_display = ('email', 'subscribed_on', 'active')
-    list_filter = ('active', 'subscribed_on')
+    list_display = ('email', 'subscribed_on')
+    list_filter = ('subscribed_on',)
     search_fields = ('email',)

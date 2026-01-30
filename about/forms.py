@@ -13,4 +13,4 @@ class ContactForm(forms.ModelForm):
 class NewsletterForm(forms.ModelForm):
     class Meta:
         model = NewsletterSubscriber
-        fields = ['email']
+        fields = ['name', 'email']

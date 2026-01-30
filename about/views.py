@@ -43,18 +43,13 @@ def faq_page(request):
 
 # Newsletter subscription view
 def subscribe_newsletter(request):
-    """Handles newsletter form submissions"""
-    if request.method == "POST":
+    if request.method == 'POST':
         form = NewsletterForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "Successfully subscribed to our newsletter!")
-            return redirect('newsletter')
+            messages.success(request, "Thank you for subscribing!")
+            return redirect('newsletter')  # or any page
     else:
         form = NewsletterForm()
 
-    return render(
-        request,
-        "about/newsletter.html",
-        {"form": form}
-    )
+    return render(request, 'about/newsletter.html', {'newsletter_form': form})
