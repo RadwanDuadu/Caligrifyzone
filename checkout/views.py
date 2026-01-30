@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.db.models import F
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -66,6 +67,12 @@ def checkout(request):
                             quantity=item_data,
                         )
                         order_line_item.save()
+
+                        # Reduce inventory safely using F() to prevent race conditions
+                        Product.objects.filter(id=product.id).update(
+                            inventory=F('inventory') - item_data)
+                        product.refresh_from_db()
+
                     else:
                         for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
@@ -75,6 +82,12 @@ def checkout(request):
                                 product_size=size,
                             )
                             order_line_item.save()
+
+                            # Reduce inventory safely for each size
+                            Product.objects.filter(id=product.id).update(
+                                inventory=F('inventory') - quantity)
+                            product.refresh_from_db()
+
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "

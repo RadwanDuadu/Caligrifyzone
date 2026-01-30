@@ -56,12 +56,20 @@
        } else {
           var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
        }
+       var maxQuantity = parseInt($(closestInput).data('max'));
        var currentValue = parseInt($(closestInput).val());
        
-       // ✅ HARD STOP AT 50
-       if (currentValue < 50) {
+       // ✅ HARD STOP AT maxQuantity
+       if (currentValue < maxQuantity) {
            $(allQuantityInputs).val(currentValue + 1);
-       }
+
+           // Update all synced inputs if multiple (sizes)
+            if (size) {
+                $(`.input-group-${itemId} input[data-size='${size}']`).val(currentValue + 1);
+            } else {
+                $(`.input-group-${itemId} input[name='quantity']`).val(currentValue + 1);
+            }
+        }
        
        // Add size on handling enable/disable
        handleEnableDisable(itemId, size);
