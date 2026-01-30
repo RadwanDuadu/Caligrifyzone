@@ -8,6 +8,10 @@ body {
     font-family: 'Lato';
 }
 
+main {
+    width: 100%;
+}
+
 /* Ensure content starts below the fixed-top navbar */
 .main-content {
     padding-top: 180px !important;

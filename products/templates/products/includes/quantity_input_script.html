@@ -46,56 +46,64 @@
 
     // Increment quantity
     $('.increment-qty').click(function(e) {
-       e.preventDefault();
-       // Check data attributes when incrementing quantity
-       var itemId = $(this).data('item_id');
-       var size = $(this).data('size');
-       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-       if (size) {
-          var allQuantityInputs = $(`.input-group-${itemId} input[data-size='${size}']`);
-       } else {
-          var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
-       }
-       var maxQuantity = parseInt($(closestInput).data('max'));
-       var currentValue = parseInt($(closestInput).val());
-       
-       // ✅ HARD STOP AT maxQuantity
-       if (currentValue < maxQuantity) {
-           $(allQuantityInputs).val(currentValue + 1);
+        e.preventDefault();
 
-           // Update all synced inputs if multiple (sizes)
+        var $group = $(this).closest('.input-group');
+        var $input = $group.find('.qty_input');
+        var currentValue = parseInt($input.val());
+        var maxQuantity = parseInt($input.data('max'));
+
+        // Detect size from data-size OR <select>
+        var size = $input.data('size');
+        var $sizeSelect = $(this).closest('form').find('select[name="product_size"]');
+        if ($sizeSelect.length) {
+            size = $sizeSelect.val();
+            $input.data('size', size); // store on input
+        }
+
+        if (currentValue < maxQuantity) {
+            $input.val(currentValue + 1);
+
+            // Sync all inputs with the same itemId and size
+            var itemId = $(this).data('item_id');
             if (size) {
                 $(`.input-group-${itemId} input[data-size='${size}']`).val(currentValue + 1);
             } else {
                 $(`.input-group-${itemId} input[name='quantity']`).val(currentValue + 1);
             }
         }
-       
-       // Add size on handling enable/disable
-       handleEnableDisable(itemId, size);
+
+        handleEnableDisable($(this).data('item_id'), size);
     });
 
     // Decrement quantity
     $('.decrement-qty').click(function(e) {
-       e.preventDefault();
+        e.preventDefault();
 
-       var itemId = $(this).data('item_id');
-       var size = $(this).data('size');
-       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        var $group = $(this).closest('.input-group');
+        var $input = $group.find('.qty_input');
+        var currentValue = parseInt($input.val());
 
-       if (size) {
-          var allQuantityInputs = $(`.input-group-${itemId} input[data-size='${size}']`);
-       } else {
-          var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
-       }
+        // Detect size from data-size OR <select>
+        var size = $input.data('size');
+        var $sizeSelect = $(this).closest('form').find('select[name="product_size"]');
+        if ($sizeSelect.length) {
+            size = $sizeSelect.val();
+            $input.data('size', size);
+        }
 
-       var currentValue = parseInt($(closestInput).val());
+        if (currentValue > 1) {
+            $input.val(currentValue - 1);
 
-       // ✅ HARD STOP AT 1
-       if (currentValue > 1) {
-           $(allQuantityInputs).val(currentValue - 1);
-       }
+            // Sync all inputs with same itemId and size
+            var itemId = $(this).data('item_id');
+            if (size) {
+                $(`.input-group-${itemId} input[data-size='${size}']`).val(currentValue - 1);
+            } else {
+                $(`.input-group-${itemId} input[name='quantity']`).val(currentValue - 1);
+            }
+        }
 
-       handleEnableDisable(itemId, size);
+        handleEnableDisable($(this).data('item_id'), size);
     });
 </script>
