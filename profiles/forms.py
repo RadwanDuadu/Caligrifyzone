@@ -22,15 +22,24 @@ class UserProfileForm(forms.ModelForm):
             'default_county': 'County, State or Locality',
         }
 
+        # Make these fields required
+        required_fields = [
+            'default_phone_number',
+            'default_postcode',
+            'default_town_or_city',
+            'default_street_address1',
+            'default_country'
+        ]
+        for field in required_fields:
+            self.fields[field].required = True
+
+        # Set placeholders, classes, labels, autofocus
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
-        for field in self.fields:
-            if field != 'default_country':
-                if self.fields[field].required:
-                    placeholder = f'{placeholders[field]} *'
-                else:
-                    placeholder = placeholders[field]
-                self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = (
-                'border-black rounded-0 profile-form-input'
-            )
-            self.fields[field].label = False
+        for field_name, field in self.fields.items():
+            if field_name != 'default_country':
+                placeholder = placeholders.get(field_name, '')
+                if field.required:
+                    placeholder += ' *'
+                field.widget.attrs['placeholder'] = placeholder
+            field.widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
+            field.label = False
