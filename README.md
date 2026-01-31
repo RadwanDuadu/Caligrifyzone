@@ -14,86 +14,77 @@ The rationale behind this project comes from a personal interest in calligraphy 
 
 From a development perspective, Caligrifyzone also serves as a full-stack learning project, enabling the implementation of key e-commerce features such as product management, user authentication, secure payments, webhooks, and automated testing. This project demonstrates how technical skills can be applied to support creative expression while delivering a professional, user-focused online shopping experience.
 
-
-
-🛑 README NOTES 🛑
-
-Do not add a **Table of Contents** to your Markdown files. GitHub has these built-in automatically using the headers/hashtags.
-
-Don't add screenshots for the README/TESTING into your `assets` or `static` folders. Create a new folder at the root-level called `documentation`. Consider creating sub-directories within `documentation` to handle things like `wireframes`, `features`, `validation`, `responsiveness`, etc.
-
-Learn about Markdown Alerts (aka Callouts), a fairly new feature for GitHub Markdown files.
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
-Note: these are not visible within your README Previewer, and are only visible once you push the code to GitHub.
-
-**Site Mockups**
-*([amiresponsive](https://ui.dev/amiresponsive?url=https://caligrifyzone-90b1cd839db0.herokuapp.com), [techsini](https://techsini.com/multi-mockup), etc.)*
-Having issues generating site mockups? This is likely due to security policies with your deployed site.
-If you open up your DevTools, there may be an error referencing `X-Frame-Options`.
-
-For Chrome users, head over to http://bit.ly/3iRPn4u and install the extension within your browser. Once installed, navigate back to the mockup site of your choice. You should find your site rendering in the various devices now.
-
-Alternatively, open your project in Gitpod and run the server. Once the site is running, click the `Ports` tab from your Gitpod Terminal. Click the padlock on the appropriate port for your project (`Flask: 5000`, `Django: 8000`). This will make your local page public temporarily. Now, copy the URL of your live-preview page into the responsive tool above. You should find your site rendering in the various devices.
-
-🛑 --- END ---- 🛑
-
 ![screenshot](documentation/mockup.png)
 
 source: [Caligrifyzone amiresponsive](https://ui.dev/amiresponsive?url=https://caligrifyzone-90b1cd839db0.herokuapp.com)
-
-> [!IMPORTANT]  
-> The examples in these templates are strongly influenced by the Code Institute walkthrough project called "Boutique Ado".
 
 ## UX
 
 ### The 5 Planes of UX
 
-⚠️ NOTE: make sure to update the text below to match your own project! ⚠️
-
 #### 1. Strategy
 
 **Purpose**
-- Provide a seamless and intuitive e-commerce experience for customers to browse, filter, and purchase products.
-- Empower site owners to manage the store's inventory and customer orders efficiently.
+
+* Provide a visually engaging and intuitive e-commerce platform for showcasing and selling calligraphy-inspired artwork, with a focus on Arabic calligraphy and typographic design.
+* Enable site administrators to efficiently manage artwork listings, inventory levels, and customer orders.
 
 **Primary User Needs**
-- Guest users need to browse products and checkout with ease.
-- Registered customers need a streamlined shopping experience with account and order history features.
-- Site owners need robust tools for inventory and order management.
+
+* Visitors need to explore calligraphy artwork easily and view detailed product information before purchasing.
+* Registered users need a smooth checkout process, secure payments, and access to order history.
+* Store owners need simple tools to add, edit, and manage art pieces and categories.
 
 **Business Goals**
-- Drive sales by providing a user-friendly shopping experience.
-- Build customer loyalty through personalized and efficient account features.
-- Maintain an organized and up-to-date store inventory.
+
+* Promote and sell unique calligraphy artwork through a polished and culturally inspired online storefront.
+* Build trust and repeat engagement by offering a reliable, secure, and user-friendly shopping experience.
+* Maintain accurate inventory control for limited or exclusive art pieces.
+
+---
 
 #### 2. Scope
 
 **[Features](#features)** (see below)
 
 **Content Requirements**
-- Product details, including name, price, description, category, and images.
-- Clear prompts and instructions for browsing, filtering, and purchasing.
-- Order details, confirmation pages, and email notifications.
-- Secure payment processing using Stripe.
-- Payment success emails sent to users.
-- 404 page for lost users.
+
+* Artwork listings including title, price, description, category, size options (where applicable), and high-quality images.
+* Search, sorting, and category filtering to help users find specific styles or pieces.
+* Shopping bag and secure checkout functionality.
+* Order confirmation pages and automated confirmation emails.
+* Secure payment handling using Stripe webhooks.
+* User profile pages displaying saved delivery information and order history.
+* Custom 404 page to guide users back to the site if they get lost.
+
+---
 
 #### 3. Structure
 
 **Information Architecture**
-- **Navigation Menu**:
-  - Links to Home, Products, Cart, Newsletter, and Account sections.
-- **Hierarchy**:
-  - Prominent product categories and filters for easy navigation.
-  - Cart and checkout options displayed prominently for convenience.
+
+* **Navigation Menu**:
+
+  * Home
+  * Artworks (Products)
+  * Bag
+  * Account (Register / Login / Profile)
+* **Hierarchy**:
+
+  * Featured and categorized artwork displayed prominently.
+  * Clear access to shopping bag and checkout at all times.
 
 **User Flow**
-1. Guest user browses the store → filters and sorts products by category, price, or name.
-2. Guest user adds items to the cart → proceeds to checkout.
-3. Guest user creates an account or logs in during checkout → completes purchase.
-4. Returning customers log in → view past orders and track purchase history.
-5. Site owners manage inventory → add, update, or delete products and categories.
-6. Users signup to the newsletter → potentially receive advanced notice of upcoming sales.
+
+1. Visitor lands on Caligrifyzone → browses calligraphy artwork.
+2. User filters or searches by category, style, or keyword.
+3. User views artwork details → selects options (if available) → adds to bag.
+4. User proceeds to checkout → logs in or creates an account.
+5. Payment is completed securely via Stripe → confirmation displayed and emailed.
+6. Returning users log in → view profile, saved details, and previous orders.
+7. Admin users manage artwork listings and inventory via the admin interface.
+
+---
 
 #### 4. Skeleton
 
