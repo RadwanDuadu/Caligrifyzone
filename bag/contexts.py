@@ -1,20 +1,25 @@
 from decimal import Decimal
 from django.conf import settings
-from django.shortcuts import get_object_or_404
 from products.models import Product
 
 
 def bag_contents(request):
-
     bag_items = []
     total = 0
     product_count = 0
     bag = request.session.get('bag', {})
 
-    for item_id, item_data in bag.items():
+    # Copy keys so we can modify bag while iterating
+    for item_id, item_data in list(bag.items()):
+        try:
+            product = Product.objects.get(pk=item_id)
+        except Product.DoesNotExist:
+            # Remove deleted product from bag
+            bag.pop(item_id)
+            request.session['bag'] = bag
+            continue
 
         if isinstance(item_data, int):
-            product = get_object_or_404(Product, pk=item_id)
             total += item_data * product.price
             product_count += item_data
             bag_items.append({
@@ -22,15 +27,13 @@ def bag_contents(request):
                 'quantity': item_data,
                 'product': product,
             })
-
         else:
-            product = get_object_or_404(Product, pk=item_id)
-            for size, quantity in item_data['items_by_size'].items():
+            for size, quantity in item_data.get('items_by_size', {}).items():
                 total += quantity * product.price
                 product_count += quantity
                 bag_items.append({
                     'item_id': item_id,
-                    'quantity': item_data,
+                    'quantity': quantity,
                     'product': product,
                     'size': size,
                 })
@@ -44,7 +47,7 @@ def bag_contents(request):
 
     grand_total = delivery + total
 
-    context = {
+    return {
         'bag_items': bag_items,
         'total': total,
         'product_count': product_count,
@@ -53,5 +56,3 @@ def bag_contents(request):
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
     }
-
-    return context
