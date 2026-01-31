@@ -111,12 +111,6 @@ Accent colours play a key role in guiding user interaction and reinforcing brand
 
 ## Wireframes
 
-⚠️ INSTRUCTIONS ⚠️
-
-If you've created wireframes or mock-ups, use this section to display screenshots of your wireframes. The example table below uses sample pages from the walkthrough project to give you some inspiration for your own project, so please adjust accordingly.
-
-⚠️ --- END --- ⚠️
-
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
@@ -139,47 +133,35 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ## User Stories
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, list all of your possible user stories for the project. Samples have been provided below using the example walkthrough project for your inspiration. Make sure to adjust to match your own project features!
-
-⚠️ --- END --- ⚠️
-
-| Target | Expectation | Outcome |
-| --- | --- | --- |
-| As a guest user | I would like to browse products without needing to register | so that I can shop freely before deciding to create an account. |
-| As a guest user | I would like to be prompted to create an account or log in at checkout | so that I can complete my purchase and track my order history. |
-| As a user | I would like to sign up to the site's newsletter | so that I can stay up to date with any upcoming sales or promotions. |
-| As a customer | I would like to browse various product categories (clothing, toys, jewelry, kitchen gadgets, etc.) | so that I can easily find what I'm looking for. |
-| As a customer | I would like to sort products by price (low-to-high/high-to-low) and name (alphabetical) | so that I can quickly organize items in a way that suits my shopping style. |
-| As a customer | I would like to filter products by category | so that I can narrow down the products to the types I am most interested in. |
-| As a customer | I would like to click on individual products to view more details (description, price, image, etc.) | so that I can make an informed decision about my purchase. |
-| As a customer | I would like to add items to my shopping cart using quantity increment/decrement buttons | so that I can adjust how many units of a product I want before checkout. |
-| As a customer | I would like to view and manage my shopping cart | so that I can review, add, or remove items before proceeding to checkout. |
-| As a customer | I would like to adjust the quantity of items in my cart | so that I can modify my purchase preferences without leaving the cart. |
-| As a customer | I would like to remove items from my cart | so that I can remove products I no longer wish to buy. |
-| As a customer | I would like to proceed to checkout where I see my cart items, grand total, and input my name, email, shipping address, and card details | so that I can complete my purchase. |
-| As a customer | I would like to receive a confirmation email after my purchase | so that I can have a record of my transaction and order details. |
-| As a customer | I would like to see an order confirmation page with a checkout order number after completing my purchase | so that I know my order has been successfully placed. |
-| As a customer | I would like to securely enter my card details using Stripe at checkout | so that I can feel confident my payment information is protected. |
-| As a returning customer | I would like to be able to log in and view my past orders | so that I can track my previous purchases and order history. |
-| As a returning customer | I would like the checkout process to remember my shipping address | so that future purchases are quicker and easier. |
-| As a site owner | I would like to create new products with a name, description, price, images, and category | so that I can add additional items to the store inventory. |
-| As a site owner | I would like to update product details (name, price, description, image, category) at any time | so that I can keep my product listings accurate and up to date. |
-| As a site owner | I would like to delete products that are no longer available or relevant | so that I can maintain a clean and accurate inventory. |
-| As a site owner | I would like to view all orders placed on the website | so that I can track and manage customer purchases. |
-| As a site owner | I would like to manage product categories | so that I can ensure items are correctly organized and easy for customers to find. |
-| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. |
+| Target | Expectation  | Outcome   |
+| ------ | ------------ | ----------|
+| As a guest user         | I would like to browse calligraphy artwork and products without creating an account                          | so that I can explore Caligrifyzone freely before committing to registration.                       |
+| As a guest user         | I would like to view individual calligraphy products with detailed descriptions, prices, and images          | so that I can understand the artistic style and value before purchasing.                            |
+| As a guest user         | I would like to be prompted to log in or create an account during checkout                                   | so that I can complete my purchase and optionally track future orders.                              |
+| As a user               | I would like to sign up for the Caligrifyzone newsletter                                                     | so that I can receive updates about new artwork, custom calligraphy releases, and promotions.       |
+| As a user               | I would like to view an About page                                                                           | so that I can learn more about Caligrifyzone, its inspiration, and its artistic mission.            |
+| As a user               | I would like to access a FAQs page                                                                           | so that I can quickly find answers to common questions about products, delivery, and custom orders. |
+| As a user               | I would like to use a Contact section or form                                                                | so that I can get in touch with the site owner regarding enquiries or commissions.                  |
+| As a customer           | I would like to browse calligraphy products by category (prints, custom lettering, decorative pieces, gifts) | so that I can easily find artwork that suits my needs.                                              |
+| As a customer           | I would like to sort products by price and name                                                              | so that I can organize items according to my preferences.                                           |
+| As a customer           | I would like to filter products by category                                                                  | so that I can narrow my search to specific calligraphy styles or product types.                     |
+| As a customer           | I would like to add products to my shopping bag using quantity controls                                      | so that I can select the correct number of items before checkout.                                   |
+| As a customer           | I would like to view and manage my shopping bag                                                              | so that I can review, update, or remove items prior to purchase.                                    |
+| As a customer           | I would like to adjust item quantities or remove items from my bag                                           | so that I can refine my order easily.                                                               |
+| As a customer           | I would like to proceed to a secure checkout page                                                            | so that I can review my order, see delivery costs, and enter my personal and payment details.       |
+| As a customer           | I would like to securely pay using Stripe                                                                    | so that I can trust that my payment details are protected.                                          |
+| As a customer           | I would like to receive a confirmation email after purchase                                                  | so that I have a permanent record of my order.                                                      |
+| As a customer           | I would like to see an order confirmation page with a unique order number                                    | so that I know my purchase was successful.                                                          |
+| As a returning customer | I would like to log in and view my previous orders                                                           | so that I can review my purchase history.                                                           |
+| As a returning customer | I would like my delivery details to be saved to my profile                                                   | so that future checkouts are quicker and more convenient.                                           |
+| As a site owner         | I would like to add new calligraphy products with images, pricing, descriptions, and categories              | so that I can expand the Caligrifyzone collection.                                                  |
+| As a site owner         | I would like to edit existing product details                                                                | so that artwork listings remain accurate and up to date.                                            |
+| As a site owner         | I would like to delete products that are no longer available                                                 | so that the store inventory stays clean and relevant.                                               |
+| As a site owner         | I would like to manage product categories                                                                    | so that products are logically organised for customers.                                             |
+| As a site owner         | I would like to view all customer orders                                                                     | so that I can track purchases and fulfil orders efficiently.                                        |
+| As a user               | I would like to see a custom 404 error page                                                                  | so that I am clearly informed if I navigate to a page that does not exist.                          |
 
 ## Features
-
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, you should go over the different parts of your project, and describe each feature. You should explain what value each of the features provides for the user, focusing on your target audience, what they want to achieve, and how your project can help them achieve these things.
-
-**IMPORTANT**: Remember to always include a screenshot of each individual feature!
-
-⚠️ --- END --- ⚠️
 
 ### Existing Features
 
