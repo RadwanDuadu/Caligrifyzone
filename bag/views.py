@@ -16,7 +16,7 @@ def view_bag(request):
     bag_items = []
 
     for item_id, item_data in bag.items():
-        product = Product.objects.get(pk=item_id)
+        product = get_object_or_404(Product, pk=item_id)
 
         # Product WITHOUT sizes
         if isinstance(item_data, int):

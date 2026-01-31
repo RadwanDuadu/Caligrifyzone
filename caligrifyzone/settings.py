@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import sys
 import dj_database_url
 from pathlib import Path
 
@@ -150,6 +151,9 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+
+if 'test' in sys.argv:
+    DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
