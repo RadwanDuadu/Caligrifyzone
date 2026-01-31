@@ -98,33 +98,15 @@ source: [Caligrifyzone amiresponsive](https://ui.dev/amiresponsive?url=https://c
 
 ### Colour Scheme
 
-⚠️INSTRUCTIONS ⚠️
+Caligrifyzone uses a refined, modern colour palette that balances dark, elegant tones with soft neutrals and vibrant accents, reflecting the artistic nature of calligraphy while maintaining strong usability and accessibility.
 
-Explain your colors and color scheme. Consider adding a link and screenshot for your color scheme using [coolors](https://coolors.co/generate).
+The primary interface is built around dark and muted colours, such as near-black backgrounds and soft greys (#000000, #333333, #3a3a3a), which create a gallery-style atmosphere that allows the artwork to stand out. Text is predominantly rendered in light grey (#ccc) to ensure comfortable readability against darker backgrounds.
 
-When you add a color to the palette, the URL is dynamically updated, making it easier for you to return back to your color palette later if needed. See example below:
-
-⚠️ --- END --- ⚠️
-
-I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to generate my color palette.
-
-- `#000000` primary text.
-- `#3772FF` primary highlights.
-- `#DF2935` secondary text.
-- `#FDCA40` secondary highlights.
-
-![screenshot](documentation/coolors.png)
+Accent colours play a key role in guiding user interaction and reinforcing branding. Teal and aqua tones (#23BBBB, #188181, #17a2b8) are used for links, buttons, and interactive elements, providing visual contrast and clear affordances. Lighter neutral shades such as whitesmoke (#f5f5f5) and white (#ffffff) are used in forms and content-heavy areas to improve readability and reduce visual fatigue.
 
 ### Typography
 
-⚠️ INSTRUCTIONS ⚠️
-
-Explain any fonts and icon libraries used, like **Google Fonts**, **Font Awesome**, etc. Consider adding a link to each font used, the Font Awesome site (if used), or similar icon library.
-
-⚠️ --- END --- ⚠️
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
+- [Lato](https://fonts.google.com/specimen/Lato) was used for all body text and other secondary text.
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
 ## Wireframes

@@ -1,0 +1,3 @@
+user-agent: *
+Disallow:
+Sitemap: https://caligrifyzone-90b1cd839db0.herokuapp.com/sitemap.xml
