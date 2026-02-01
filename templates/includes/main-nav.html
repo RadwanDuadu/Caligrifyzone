@@ -1,5 +1,5 @@
 <div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
+    <ul class="navbar-nav w-auto mx-lg-auto">
         <li class="nav-item d-block d-md-none">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
                 Home
@@ -17,7 +17,7 @@
                aria-expanded="false">
                 Shop
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-0" role="menu"aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=asc" class="dropdown-item">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
@@ -36,7 +36,7 @@
                aria-expanded="false">
                 Styles
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="styles-link">
+            <div class="dropdown-menu border-0" role="menu" aria-labelledby="styles-link">
                 <a href="{% url 'products' %}?category=arabic_calligraphy" class="dropdown-item">Arabic Calligraphy</a>
                 <a href="{% url 'products' %}?category=english_calligraphy" class="dropdown-item">English Calligraphy</a>
                 <a href="{% url 'products' %}?category=japanese_calligraphy" class="dropdown-item">Japanese Calligraphy</a>
@@ -55,7 +55,7 @@
                aria-expanded="false">
                 Supplies
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="supplies-link">
+            <div class="dropdown-menu border-0" role="menu" aria-labelledby="supplies-link">
                 <a href="{% url 'products' %}?category=brushes" class="dropdown-item">Brushes & Pens</a>
                 <a href="{% url 'products' %}?category=inks_paints" class="dropdown-item">Inks & Paints</a>
                 <a href="{% url 'products' %}?category=paper_canvas" class="dropdown-item">Paper & Surfaces</a>
@@ -74,7 +74,7 @@
                aria-expanded="false">
                 Featured
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="featured-link">
+            <div class="dropdown-menu border-0" role="menu" aria-labelledby="featured-link">
                 <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
                 <a href="{% url 'products' %}?category=custom_art" class="dropdown-item">Custom Calligraphy</a>
                 <a href="{% url 'products' %}?category=limited_edition" class="dropdown-item">Limited Editions</a>
@@ -92,7 +92,7 @@
                aria-expanded="false">
                 More Info
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="moreinfo-link">
+            <div class="dropdown-menu border-0" role="menu" aria-labelledby="moreinfo-link">
                 <a href="{% url 'about' %}" class="dropdown-item">About CaligrifyZone</a>
                 <a href="{% url 'faq' %}" class="dropdown-item">FAQs</a>
                 <a href="{% url 'newsletter' %}" class="dropdown-item">Newsletter</a>
