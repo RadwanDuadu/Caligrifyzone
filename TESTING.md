@@ -23,35 +23,21 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | products | [product_detail.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/products/templates/products/product_detail.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fproducts%2F1) | ![screenshot](documentation/validation/html-products-product_detail.png) | one model error due to use of h5 title element, this is not added by developer and not effecting overall functionality |
 | products | [products.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/products/templates/products/products.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fproducts) | ![screenshot](documentation/validation/html-products-products.png) | one model error due to use of h5 title element, this is not added by developer and not effecting overall functionality |
 | profiles | [profile.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/profiles/templates/profiles/profile.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fprofile) | ![screenshot](documentation/validation/html-profiles-profile.png) | No errors |
-| templates | [404.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/templates/errors/404.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-404.png) | ⚠️ Notes (if applicable) |
+| templates | [login.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/templates/allauth/account/login.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Faccounts%2Flogin) | ![screenshot](documentation/validation/html-login.png) | No Errors |
+| templates | [logout.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/templates/allauth/account/logout.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Faccounts%2Flogout) | ![screenshot](documentation/validation/html-logout.png) | No Errors |
+| templates | [signup.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/templates/allauth/account/signup.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/validation/html-signup.png) | No Errors |
+| templates | [404.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/templates/errors/404.html) | No Link | ![screenshot](documentation/validation/html-templates-404.png) | No errors |
 
 
 ### CSS
-
-⚠️ INSTRUCTIONS ⚠️
-
-1. [*recommended*] If you are using the live deployed site, use this link: https://jigsaw.w3.org/css-validator/#validate_by_uri
-2. If you are copying/pasting your CSS code, use this link: https://jigsaw.w3.org/css-validator/#validate_by_input
-
-It's recommended to validate the live site for your primary CSS file on the deployed URL. This will give you a custom URL as well, which you can use below on your testing documentation. It makes it easier to return back to a page for validating it again in the future. The URL will look something like this:
-
-- https://jigsaw.w3.org/css-validator/validator?uri=https://caligrifyzone-90b1cd839db0.herokuapp.com
-
-If you have additional/multiple CSS files, then individual "[validation by input](https://jigsaw.w3.org/css-validator/#validate_by_input)" is recommended for the extra CSS files.
-
-**IMPORTANT**: Third-Party tools
-
-If you're using external libraries/frameworks (e.g: Bootstrap, Materialize, Font Awesome, etc.), then sometimes the tool will attempt to also validate these, even though it's not part of your own actual code that you wrote. You are not required to validate the external libraries or frameworks!
-
-⚠️ --- END --- ⚠️
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| checkout | [checkout.css](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/checkout/static/checkout/css/checkout.css) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/css-checkout-checkout.png) | ⚠️ Notes (if applicable) |
-| profiles | [profile.css](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/profiles/static/profiles/css/profile.css) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/css-profiles-profile.png) | ⚠️ Notes (if applicable) |
-| static | [base.css](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/static/css/base.css) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/css-static-base.png) | ⚠️ Notes (if applicable) |
+| checkout | [checkout.css](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/checkout/static/checkout/css/checkout.css) | No Link | ![screenshot](documentation/validation/css-checkout-checkout.png) | No Errors |
+| profiles | [profile.css](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/profiles/static/profiles/css/profile.css) | No Link| ![screenshot](documentation/validation/css-profiles-profile.png) | No Errors |
+| static | [base.css](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/static/css/base.css) | No Link | ![screenshot](documentation/validation/css-static-base.png) | No errors |
 
 
 ### JavaScript
