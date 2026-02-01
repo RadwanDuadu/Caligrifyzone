@@ -346,12 +346,6 @@ source: [Mermaid](https://mermaid.live/view#pako:eNqlVtlO4zAU_ZXIEm8FUVq2vJUSRmi
 
 ### GitHub Projects
 
-⚠️ TIP ⚠️
-
-Consider adding screenshots of your Projects Board(s), Issues (open and closed), and Milestone tasks.
-
-⚠️ --- END ---⚠️
-
 [GitHub Projects](https://www.github.com/RadwanDuadu/Caligrifyzone/projects) served as an Agile tool for this project. Through it, EPICs, User Stories, issues/bugs, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
 
 ![screenshot](documentation/gh-projects.png)
@@ -375,12 +369,6 @@ I've decomposed my Epics into User Stories for prioritizing and implementing the
 - **Won't Have**: not a priority for this iteration - future features
 
 ## Ecommerce Business Model
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss the business model for your e-commerce project. An example is provided below that aligns closely with **Boutique Ado's B2C** strategy. Be sure to align to your own project requirements.
-
-⚠️ --- END --- ⚠️
 
 This site sells goods to individual customers, and therefore follows a **Business to Customer** model. It is of the simplest **B2C** forms, as it focuses on individual transactions, and doesn't need anything such as monthly/annual subscriptions.
 
@@ -423,14 +411,6 @@ Further links for future implementation:
 - [Managing your sitemaps and using sitemaps reports](https://support.google.com/webmasters/answer/7451001)
 - [Testing the robots.txt file](https://support.google.com/webmasters/answer/6062598)
 
-### Social Media Marketing
-
-Creating a strong social base (with participation) and linking that to the business site can help drive sales. Using more popular providers with a wider user base, such as Facebook, typically maximizes site views.
-
-I've created a mockup Facebook business account using the [Balsamiq template](https://code-institute-org.github.io/5P-Assessments-Handbook/files/Facebook_Mockups.zip) provided by Code Institute.
-
-![screenshot](documentation/mockup-facebook.png)
-
 ### Newsletter Marketing
 
 I have incorporated a newsletter sign-up form on my application, to allow users to supply their email address if they are interested in learning more. 
@@ -439,33 +419,15 @@ I have incorporated a newsletter sign-up form on my application, to allow users 
 
 **Custom Django Model Newsletter**
 
-- Create a custom `newsletter` app in your project, with a custom model/class called `Newsletter`.
-- This method satisfies two assessment criteria:
-    1. include a newsletter
-    2. one of your 3 required custom models
-- It doesn't need anything except the `email` field on the model, but feel free to add more if you need.
-- Example: (keep this in your README if you've done this method, attach your `Newsletter` model in a code block like the following example)
     ```python
-    class Newsletter(models.Model):
-        email = models.EmailField(unique=True, null=False, blank=False)
+    class NewsletterSubscriber(models.Model):
+    name = models.CharField(max_length=100)       # <- add this
+    email = models.EmailField(unique=True)
+    subscribed_on = models.DateTimeField(auto_now_add=True)
 
-        def __str__(self):
-            return self.email
+    def __str__(self):
+        return f"{self.name} ({self.email})"
     ```
-- Consider using the same `send_mail()` functionality used on the `webhook_handler.py` file.
-    - You can trigger an email to be sent out to subscribed users when new products are added to the site!
-
-⚠️ --- END --- ⚠️
-
-🛑 OPTION 2 🛑
-
-**MailChimp Newsletter**
-
-- Sign up for a Mailchimp account
-- This allows up to 2,500 subscription email sends per month
-- Incorporate the code and scripts into your project like in the Code Institute lessons.
-
-🛑 --- END --- 🛑
 
 ## Testing
 
@@ -489,17 +451,9 @@ Deployment steps are as follows, after account setup:
 > [!IMPORTANT]  
 > This is a sample only; you would replace the values with your own if cloning/forking my repository.
 
-🛑 !!! ATTENTION RadwanDuadu !!! 🛑
-
-⚠️ DO NOT update the environment variables to your own! These should never be public; only use the demo values below! ⚠️
-⚠️ Replace the keys below with your own actual keys used; example: if not using AWS, then replace those keys with Cloudinary keys, or similar. ⚠️
-
-🛑 --- END --- 🛑
-
 | Key | Value |
 | --- | --- |
-| `AWS_ACCESS_KEY_ID` | user-inserts-own-aws-access-key-id |
-| `AWS_SECRET_ACCESS_KEY` | user-inserts-own-aws-secret-access-key |
+| `CLOUDINARY_URL` | user-inserts-own-cloudinary-database-url |
 | `DATABASE_URL` | user-inserts-own-postgres-database-url |
 | `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
 | `EMAIL_HOST_PASS` | user-inserts-own-gmail-api-key |
@@ -508,7 +462,7 @@ Deployment steps are as follows, after account setup:
 | `STRIPE_PUBLIC_KEY` | user-inserts-own-stripe-public-key |
 | `STRIPE_SECRET_KEY` | user-inserts-own-stripe-secret-key |
 | `STRIPE_WH_SECRET` | user-inserts-own-stripe-webhook-secret |
-| `USE_AWS` | True |
+| `HOST` | heroku-website-url |
 
 Heroku needs some additional files in order to deploy properly.
 
@@ -659,21 +613,13 @@ You will need to create a new file called `env.py` at the root-level, and includ
 > [!IMPORTANT]  
 > This is a sample only; you would replace the values with your own if cloning/forking my repository.
 
-🛑 !!! ATTENTION RadwanDuadu !!! 🛑
-
-⚠️ DO NOT update the environment variables to your own! These should never be public; only use the demo values below! ⚠️
-⚠️ Replace the keys below with your own actual keys used; example: if not using Cloudinary | AWS, then replace those keys with whatever keys you're using. ⚠️
-
-🛑 --- END --- 🛑
-
 Sample `env.py` file:
 
 ```python
 import os
 
-os.environ.setdefault("AWS_ACCESS_KEY_ID", "user-inserts-own-aws-access-key-id")
-os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "user-inserts-own-aws-secret-access-key")
 os.environ.setdefault("DATABASE_URL", "user-inserts-own-postgres-database-url")
+os.environ.setdefault("CLOUDINARY_URL", "user-inserts-own-cloudinary-database-url")
 os.environ.setdefault("EMAIL_HOST_PASS", "user-inserts-own-gmail-host-api-key")
 os.environ.setdefault("EMAIL_HOST_USER", "user-inserts-own-gmail-email-address")
 os.environ.setdefault("SECRET_KEY", "any-random-secret-key")
@@ -683,7 +629,6 @@ os.environ.setdefault("STRIPE_WH_SECRET", "user-inserts-own-stripe-webhook-secre
 
 # local environment only (do not include these in production/deployment!)
 os.environ.setdefault("DEBUG", "True")
-os.environ.setdefault("DEVELOPMENT", "True")
 ```
 
 Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
@@ -731,31 +676,11 @@ By forking the GitHub Repository, you make a copy of the original repository on 
 
 ### Local VS Deployment
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site. Generally, there shouldn't be [m]any major differences, so if you honestly cannot find any differences, feel free to use the following example:
-
-⚠️ --- END --- ⚠️
-
 There are no remaining major differences between the local version when compared to the deployed version online.
 
 ## Credits
 
-⚠️ INSTRUCTIONS ⚠️
-
-In the following sections, you need to reference where you got your content, media, and any extra help. It is common practice to use code from other repositories and tutorials (which is totally acceptable), however, it is important to be very specific about these sources to avoid potential plagiarism.
-
-⚠️ --- END ---⚠️
-
 ### Content
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to provide attribution links for any borrowed code snippets, elements, and resources. Ideally, you should provide an actual link to every resource used, not just a generic link to the main site. If you've used multiple components from the same source (such as Bootstrap), then you only need to list it once, but if it's multiple Codepen samples, then you should list each example individually. If you've used AI for some assistance (such as ChatGPT or Perplexity), be sure to mention that as well. A few examples have been provided below to give you some ideas.
-
-Eventually you'll want to learn how to use Git branches. Here's a helpful tutorial called [Learn Git Branching](https://learngitbranching.js.org) to bookmark for later.
-
-⚠️ --- END ---⚠️
 
 | Source | Notes |
 | --- | --- |
@@ -763,20 +688,12 @@ Eventually you'll want to learn how to use Git branches. Here's a helpful tutori
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | "How to Write a Git Commit Message" |
 | [Boutique Ado](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
 | [Bootstrap](https://getbootstrap.com) | Various components / responsive front-end framework |
-| [AWS S3](https://aws.amazon.com/s3) | Cloud storage for static/media files |
 | [Whitenoise](https://whitenoise.readthedocs.io) | Static file service |
 | [Stripe](https://docs.stripe.com/payments/elements) | Online payment services |
 | [Gmail API](https://developers.google.com/gmail/api/guides) | Sending payment confirmation emails |
-| [Python Tutor](https://pythontutor.com) | Additional Python help |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
 
 ### Media
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to provide attribution links to any media files borrowed from elsewhere (images, videos, audio, etc.). If you're the owner (or a close acquaintance) of some/all media files, then make sure to specify this information. Let the assessors know that you have explicit rights to use the media files within your project. Ideally, you should provide an actual link to every media file used, not just a generic link to the main site, unless it's AI-generated artwork.
-
-Looking for some media files? Here are some popular sites to use. The list of examples below is by no means exhaustive.
 
 - Images
     - [Pexels](https://www.pexels.com)
@@ -785,46 +702,14 @@ Looking for some media files? Here are some popular sites to use. The list of ex
     - [Lorem Picsum](https://picsum.photos) (placeholder images)
     - [Wallhere](https://wallhere.com) (wallpaper / backgrounds)
     - [This Person Does Not Exist](https://thispersondoesnotexist.com) (reload to get a new person)
-- Audio
-    - [Audio Micro](https://www.audiomicro.com/free-sound-effects)
-    - [Button Clicks](https://www.zapsplat.com/sound-effect-category/button-clicks)
-    - [Lasers & Weapons](https://www.zapsplat.com/sound-effect-category/lasers-and-weapons/page/5)
-    - [Puzzle Music](https://soundimage.org/puzzle-music)
-    - [Camtasia Audio](https://library.techsmith.com/camtasia/assets/Audio)
-- Video
-    - [Videvo](https://www.videvo.net)
-- Image Compression
-    - [TinyPNG](https://tinypng.com) (for images <5MB)
-    - [CompressPNG](https://compresspng.com) (for images >5MB)
-
-A few examples have been provided below to give you some ideas on how to do your own Media credits.
-
-⚠️ --- END ---⚠️
 
 | Source | Notes |
 | --- | --- |
 | [favicon.io](https://favicon.io) | Generating the favicon |
 | [Boutique Ado](https://codeinstitute.net) | Sample images provided from the walkthrough projects |
-| [Font Awesome](https://fontawesome.com) | Icons used throughout the site |
-| [Pexels](https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg) | Hero image |
-| [Wallhere](https://c.wallhere.com/images/9c/c8/da4b4009f070c8e1dfee43d25f99-2318808.jpg!d) | Background wallpaper |
-| [Pixabay](https://cdn.pixabay.com/photo/2017/09/04/16/58/passport-2714675_1280.jpg) | Background wallpaper |
-| [DALL-E 3](https://openai.com/index/dall-e-3) | AI generated artwork |
-| [TinyPNG](https://tinypng.com) | Compressing images < 5MB |
-| [CompressPNG](https://compresspng.com) | Compressing images > 5MB |
-| [CloudConvert](https://cloudconvert.com/webp-converter) | Converting images to `.webp` |
+| [Font Awesome](https://fontawesome.com) | Icons used throughout the site |Background wallpaper |
 
 ### Acknowledgements
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to provide attribution and acknowledgement to any supports that helped, encouraged, or supported you throughout the development stages of this project. It's always lovely to appreciate those that help us grow and improve our developer skills. A few examples have been provided below to give you some ideas.
-
-⚠️ --- END ---⚠️
-
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN) for the support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) Tutor Team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) and [Code Institute Discord community](https://discord-portal.codeinstitute.net) for the moral support; it kept me going during periods of self doubt and impostor syndrome.
-- I would like to thank my partner, for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
-
