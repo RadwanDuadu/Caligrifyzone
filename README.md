@@ -262,8 +262,7 @@ erDiagram
     NEWSLETTER_SUBSCRIBER {
         int id PK
         string name
-        string email UNIQUE
-        datetime subscribed_on
+        string email
     }
 
     USER {
