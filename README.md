@@ -223,15 +223,6 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | [![badge](https://img.shields.io/badge/Mermaid-grey?logo=mermaid&logoColor=FF3670)](https://mermaid.live) | Generate an interactive diagram for the data/schema. |
 | [![badge](https://img.shields.io/badge/favicon.io-grey?logo=fi&logoColor=209CEE)](https://favicon.io) | Generating the favicon. |
 
-⚠️ NOTE ⚠️
-
-Want to add more?
-
-- Tutorial: https://shields.io/badges/static-badge
-- Icons/Logos: https://simpleicons.org
-  - FYI: not all logos are available to use
-
-🛑 --- END --- 🛑
 
 ## Database Design
 
@@ -241,150 +232,116 @@ Entity Relationship Diagrams (ERD) help to visualize database architecture befor
 
 ![screenshot](documentation/erd.png)
 
-⚠️ INSTRUCTIONS ⚠️
-
-Using your defined models, create an ERD with the relationships identified. A couple of recommendations for building your own free ERDs:
-- [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
-- [Draw.io](https://draw.io)
-
-Looking for an interactive version of your ERD? Consider using a [`Mermaid flowchart`](https://mermaid.live). To simplify the process, you can ask ChatGPT (or similar) the following prompt:
-
-> ChatGPT Prompt:  
-> "Generate a Markdown syntax Mermaid ERD using my Django models"  
-> [paste-your-django-models-into-ChatGPT]
-
-The "Boutique Ado" sample ERD in Markdown syntax using Mermaid can be seen below as an example.
-
-**NOTE**: A Markdown Preview tool doesn't show the interactive ERD; you must first commit/push the code to your GitHub repository in order to see it live in action.
-
-⚠️ --- END --- ⚠️
-
 I have used `Mermaid` to generate an interactive ERD of my project.
 
 ```mermaid
 erDiagram
-    User {
+
+    ABOUT {erd
         int id PK
-        varchar username
-        varchar email
-        varchar password
+        string title
+        datetime updated_on
+        text content
     }
 
-    UserProfile {
+    CONTACT {
         int id PK
-        varchar default_phone_number
-        varchar default_street_address1
-        varchar default_street_address2
-        varchar default_town_or_city
-        varchar default_county
-        varchar default_postcode
-        varchar default_country
+        string name
+        string email
+        text message
+        boolean read
     }
 
-    User ||--|| UserProfile : has_one
-
-    Category {
+    FAQ {
         int id PK
-        varchar name
-        varchar friendly_name
+        string question
+        text answer
+        int order
     }
 
-    Product {
+    NEWSLETTER_SUBSCRIBER {
         int id PK
-        varchar sku
-        varchar name
+        string name
+        string email UNIQUE
+        datetime subscribed_on
+    }
+
+    USER {
+        int id PK
+        string username
+        string email
+    }
+
+    USER_PROFILE {
+        int id PK
+        int user_id FK
+        string default_phone_number
+        string default_street_address1
+        string default_street_address2
+        string default_town_or_city
+        string default_county
+        string default_postcode
+        string default_country
+    }
+
+    CATEGORY {
+        int id PK
+        string name
+        string friendly_name
+    }
+
+    PRODUCT {
+        int id PK
+        int category_id FK
+        string sku
+        string name
         text description
-        bool has_sizes
+        boolean has_sizes
         decimal price
         decimal rating
-        varchar image_url
-        image image
+        int inventory
+        string image
     }
 
-    Product ||--o| Category : belongs_to
-
-    Order {
+    ORDER {
         int id PK
-        varchar order_number
-        varchar full_name
-        varchar email
-        varchar phone_number
-        varchar country
-        varchar postcode
-        varchar town_or_city
-        varchar street_address1
-        varchar street_address2
-        varchar county
+        string order_number
+        int user_profile_id FK
+        string full_name
+        string email
+        string phone_number
+        string country
+        string postcode
+        string town_or_city
+        string street_address1
+        string street_address2
+        string county
         datetime date
         decimal delivery_cost
         decimal order_total
         decimal grand_total
         text original_bag
-        varchar stripe_pid
+        string stripe_pid
     }
 
-    OrderLineItem {
+    ORDER_LINE_ITEM {
         int id PK
+        int order_id FK
+        int product_id FK
+        string product_size
         int quantity
         decimal lineitem_total
-        varchar product_size
     }
 
-    Order ||--o| OrderLineItem : has_many
-    OrderLineItem ||--o| Product : belongs_to
-
-    Order ||--o| UserProfile : belongs_to
-
-    Newsletter {
-        int id PK
-        varchar email
-    }
-
-    Contact {
-        int id PK
-        varchar name
-        varchar email
-        text message
-    }
-
-    FAQ {
-        int id PK
-        varchar question
-        text answer
-    }
+    %% Relationships
+    USER ||--|| USER_PROFILE : has
+    USER_PROFILE ||--o{ ORDER : places
+    ORDER ||--o{ ORDER_LINE_ITEM : contains
+    PRODUCT ||--o{ ORDER_LINE_ITEM : appears_in
+    CATEGORY ||--o{ PRODUCT : categorizes
 ```
 
-source: [Mermaid](https://mermaid.live/edit#pako:eNqVVcFu2zAM_RVD57RIHLdpfRs6DBg2bB2GXYYAhmIxjlBZcimqqdvk3yfbSVPHceP5kBh8TyRFPtKvLDUCWMwAP0ueIc_nOvDPHwsYvDbv1SM1BVIE998OpieO6Ypj4DxV8xy6CORcqq654NauDYoG2c71IeQ9mqVUMDCygCV3ipJiZTQk2uULwH6WJQSghAuBYO1kKDHsJ5JZ68Rgkkoq-1mpcfojvDCWqiac8YDliXoFm83FxWbTql0crLhNfEX2xDtOkBksB1b1dC-XKEELVSYH-C0TH1m4lAb6tw_uXFCCZ_K3tynKgqTRB2RhjKrvZ-UL2INdQCpzroICZQpdM3KSOuuG9WAGicN3Kq1NzW_PNauam82hrHGwAGV0Zr0g9tyfKAYPkKm4vfJdOqWS_5uvD8ehJabWsV4dfqzzs3N1dp6OJ0T4ypLMoX7pNlOAkk-ApZ8LS124KScZ4qoL-g2nxTFYy82gzKTmKlnw7OQdZAFJIY-3Vt3o71LDV4L8TMMr06Pjmlp13KemvBPpnRxn99afRn618k8lsddlO6NmG-Rcl6fy3R3ZK7tfyTtie890yT9gbRUQDdb-Owm_3ebOaOKD18mg0ag7nHv1daf6y6dfAyM9OrDtbVS75dqu94O2ZSOWA_rgwn9Ta7dzRivwKbLYvwqOD3M21xWPOzK_S52ymNDBiLmikvvuK8ziJVfWWwuuWfzKnlk8jSaXN9ez8HoyHc_C8TiajVjJ4ovp5XUUTqMovLqdXd2Et-FsO2Ivxngfk8vxZBpGkT_m_zxW-_tbY01QNC5b7YJt_wE0ZoQj)
-
-⚠️ RECOMMENDED ⚠️
-
-Alternatively, or in addition to, a more comprehensive ERD can be auto-generated once you're at the end of your development stages, just before you submit. Follow the steps below to obtain a thorough ERD that you can include. Feel free to leave the steps below in the README for future use to yourself.
-
-⚠️ --- END --- ⚠️
-
-I have used `pygraphviz` and `django-extensions` to auto-generate an ERD.
-
-The steps taken were as follows:
-- In the terminal: `sudo apt update`
-- then: `sudo apt-get install python3-dev graphviz libgraphviz-dev pkg-config`
-- then type `Y` to proceed
-- then: `pip3 install django-extensions pygraphviz`
-- in my `settings.py` file, I added the following to my `INSTALLED_APPS`:
-```python
-INSTALLED_APPS = [
-    ...
-    'django_extensions',
-    ...
-]
-```
-- back in the terminal: `python3 manage.py graph_models -a -o erd.png`
-- drag the new `erd.png` file into my `documentation/` folder
-- removed `'django_extensions',` from my `INSTALLED_APPS`
-- finally, in the terminal: `pip3 uninstall django-extensions pygraphviz -y`
-
-![screenshot](documentation/advanced-erd.png)
-
-source: [medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16)
+source: [Mermaid](https://mermaid.live/view#pako:eNqlVtlO4zAU_ZXIEm8FUVq2vJUSRmiAznTRaEaVLBPfphaOHWwHKG3_fZykabPQRSJP9t3te86N58iXFJCLQN0yEigSjsVYOPbr3PRGQ2eebZKPCeMw6vz6uRFpo5gIHMMMh42UEgOGheDEUbKkWIqN0sCHcXwpDAiTSZd5xm7vadjpHphTkBBqQggJ45VcIWhNgoLts5QciHAUEFqp4K7z-7DsrzFow2rnIkK_gyoHkIrmonWeJ-_P4MEbDr0-HoxuBt3-_Y3X_-65nUqS0eDQmLEGte8-S2Hxr37v7v7B2xM-ESWxsZXf1dNSmJCYGxxNpQAs4vC5eHcVI7sFMJhQqmxDmwfanW21M_JdYKmwz8xsq5EvY7FDHUltEvrs9lezKs47Q-9Hr__3Gw2fKAaC8hneaNfhbW9uR3tplIh8y85AqtmW_uiXeE81KegpaF-xqEyHnGRTorFmn6AL4wF8FhLuRIr5UBcrYmyiSu3izY4LqeqtsC5B9QJ6_dtDkZ-Sswa9NW4jJSeMw5b7mcSc40Pm0Eq6E-clqBSdtmFsJ4D3sWUfS6rAX4_0ZFHvGQXO3sACybfV1tXZLRtpCK8r7T9H0KoyBZZULGCCcPxMgq9OwCLAEaNfdR8_3D95-H7oPR5Ag6y8So8ThW0_jX2zpf25NoF32e81JsKU2pIfljMBzEBYPO-68qMjpw-cJETSUxbpwhhfLI6PF4vy7HUTcn0xkxNbOV-xwHUiTvycfpmsaFC4KDf9LRMmdHmObDUnUQREacyqc23lkQdw80GTzQHUQIFiFLlGxdBAISjLFrtFaafGyEzBUgq5dkmJehmjsVhan4iIf1KGuZuScTBF7oRwbXfZS2P1gslNSGzkYCb8tYsdmaC6CbSRe55GRO4cfSC3edE8ubhuN89OW9etdqt51mqgGXLbFyeX56f2u2pdNq_OW-1lA32mNZyeXF3aCECZnUqP2QsqfUgt_wN80tbf)
 
 ## Agile Development Process
 
