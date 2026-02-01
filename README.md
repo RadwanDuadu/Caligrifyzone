@@ -237,7 +237,7 @@ I have used `Mermaid` to generate an interactive ERD of my project.
 ```mermaid
 erDiagram
 
-    ABOUT {erd
+    ABOUT {
         int id PK
         string title
         datetime updated_on
@@ -262,7 +262,7 @@ erDiagram
     NEWSLETTER_SUBSCRIBER {
         int id PK
         string name
-        string email
+        string email 
     }
 
     USER {
