@@ -100,9 +100,9 @@ source: [Caligrifyzone amiresponsive](https://ui.dev/amiresponsive?url=https://c
 
 Caligrifyzone uses a refined, modern colour palette that balances dark, elegant tones with soft neutrals and vibrant accents, reflecting the artistic nature of calligraphy while maintaining strong usability and accessibility.
 
-The primary interface is built around dark and muted colours, such as near-black backgrounds and soft greys ('#000000', '#333333', '#3a3a3a'), which create a gallery-style atmosphere that allows the artwork to stand out. Text is predominantly rendered in light grey ('#ccc') to ensure comfortable readability against darker backgrounds.
+The primary interface is built around dark and muted colours, such as near-black backgrounds and soft greys (`#000000`, `#333333`, `#3a3a3a`), which create a gallery-style atmosphere that allows the artwork to stand out. Text is predominantly rendered in light grey (`#ccc`) to ensure comfortable readability against darker backgrounds.
 
-Accent colours play a key role in guiding user interaction and reinforcing branding. Teal and aqua tones ('#23BBBB', '#188181', '#17a2b8') are used for links, buttons, and interactive elements, providing visual contrast and clear affordances. Lighter neutral shades such as whitesmoke ('#f5f5f5') and white ('#ffffff') are used in forms and content-heavy areas to improve readability and reduce visual fatigue.
+Accent colours play a key role in guiding user interaction and reinforcing branding. Teal and aqua tones (`#23BBBB`, `#188181`, `#17a2b8`) are used for links, buttons, and interactive elements, providing visual contrast and clear affordances. Lighter neutral shades such as whitesmoke (`#f5f5f5`) and white (`#ffffff`) are used in forms and content-heavy areas to improve readability and reduce visual fatigue.
 
 ### Typography
 
@@ -185,7 +185,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | User Feedback | Clear and concise Django messages are used to provide feedback to users when interacting with various features (e.g., adding products to the bag, checking out, etc.). | ![screenshot](documentation/features/user-feedback.png) |
 | Heroku Deployment | The site is deployed to Heroku, making it accessible online for users. | ![screenshot](documentation/features/heroku.png) |
 | SEO | SEO optimization with a sitemap.xml, robots.txt, and appropriate meta tags to improve search engine visibility. | ![screenshot](documentation/features/seo.png) |
-| Marketing | Social media presence is available in the footer using external links, as well as a Facebook Marketplace wireframe in the README for future integrations. | ![screenshot](documentation/features/marketing.png) |
+| Marketing | Social media presence is available in the footer using external links, as well as a newsletter funtionality used to sign up for future marketing. | ![screenshot](documentation/features/marketing.png) |
 | 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](documentation/features/404.png) |
 
 ### Future Features
@@ -414,8 +414,6 @@ Further links for future implementation:
 ### Newsletter Marketing
 
 I have incorporated a newsletter sign-up form on my application, to allow users to supply their email address if they are interested in learning more. 
-
-⚠️ OPTION 1: RECOMMENDED ⚠️
 
 **Custom Django Model Newsletter**
 
@@ -695,19 +693,31 @@ There are no remaining major differences between the local version when compared
 
 ### Media
 
-- Images
-    - [Pexels](https://www.pexels.com)
-    - [Unsplash](https://unsplash.com)
-    - [Pixabay](https://pixabay.com)
-    - [Lorem Picsum](https://picsum.photos) (placeholder images)
-    - [Wallhere](https://wallhere.com) (wallpaper / backgrounds)
-    - [This Person Does Not Exist](https://thispersondoesnotexist.com) (reload to get a new person)
-
 | Source | Notes |
-| --- | --- |
-| [favicon.io](https://favicon.io) | Generating the favicon |
-| [Boutique Ado](https://codeinstitute.net) | Sample images provided from the walkthrough projects |
-| [Font Awesome](https://fontawesome.com) | Icons used throughout the site |Background wallpaper |
+| ------ | ----- |
+| [favicon.io](https://favicon.io)                                                                                   | Generating the favicon                                  |
+| [Boutique Ado](https://codeinstitute.net)                                                                          | Sample images provided from the walkthrough projects    |
+| [Font Awesome](https://fontawesome.com)                                                                            | Icons used throughout the site                          |
+| [Amazon](https://www.amazon.ie/Artline-Ergoline-Calligraphy-Sizes-Colour/dp/B01ELA5CK2)                            | Calligraphy brush/pen reference images                  |
+| [Amazon AU](https://www.amazon.com.au/ANCLLO-Excellent-Chinese-Calligraphy-Japanese/dp/B091XWWWRK)                 | Chinese and Japanese calligraphy brush reference images |
+| [Cavdu Shop](https://www.cavdu.shop/?ggcid=394722)                                                                 | Calligraphy brush and pen reference images              |
+| [Zart Art](https://zartart.com.au/products/chinese-pen-brushes-assorted-pack-of-3)                                 | Assorted Chinese pen brush reference images             |
+| [Write Away](https://writeaway.ie/products/icon-calligraphy-pen-set-35-pieces)                                     | Calligraphy pen set reference images                    |
+| [Indah Puri](https://www.indahpuri.com/product/Yasutomo-Sumi-Ink-Stick-Artist-Quality-Traditional-Japanese/398958) | Traditional Japanese sumi ink reference images          |
+| [Pen Store Ireland](https://penstore.ie/ie/nassau-fine-art/calligraphy-set-with-ink)                               | Calligraphy ink set reference images                    |
+| [SG Education](https://www.sgeducation.ie/wn-calligraphy-ink-wooden-box-set)                                       | Calligraphy ink wooden box set reference images         |
+| [Amazon AU](https://www.amazon.com.au/CORHAD-Calligraphy-Practice-Reusable-Hanging/dp/B0DPJ9W6QX)                  | Calligraphy practice paper reference images             |
+| [Joom](https://www.joom.com/en/products/656cff1028662001592be25a)                                                  | Calligraphy practice paper reference images             |
+| [Tom’s Studio](https://tomsstudio.com/products/calligraphy-practice-booklet)                                       | Calligraphy practice booklet reference images           |
+| [Freepik](https://www.freepik.com/premium-vector/bismillah-arabic-calligraphy-vector-design_86943252.htm)          | Arabic calligraphy vector design reference              |
+| [Freepik](https://www.freepik.com/premium-vector/alhamdulillah_408131550.htm)                                      | Arabic calligraphy vector design reference              |
+| [Pinterest](https://www.pinterest.com/search/pins/?q=arabic%20calligraphy)                                         | Arabic calligraphy inspiration and reference images     |
+| [Google Images](https://www.google.com/search?q=arabic+calligraphy+bismillah&udm=2)                                | Arabic calligraphy image references                     |
+| [The Iman Store](https://www.theimanstore.com/products/kids-canvas-kit-arabic-calligraphy)                         | Kids Arabic calligraphy canvas kit reference            |
+| [Gathered](https://www.gathered.how/arts-crafts/calligraphy-kits-for-beginners)                                    | Beginner calligraphy kits reference                     |
+| [Pinterest](https://www.pinterest.com/pin/tranquility-limited-edition-gicle-print--319826011024226473/)            | Limited edition calligraphy print inspiration           |
+| [Pinterest](https://www.pinterest.com/pin/150800287503497715/)                                                     | Limited edition calligraphy artwork inspiration         |
+
 
 ### Acknowledgements
 
