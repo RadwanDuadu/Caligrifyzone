@@ -13,8 +13,8 @@
       {% for faq in faqs %}
         <div class="card mb-3 shadow-sm">
           <div class="card-body">
-            <h5 class="card-title font-weight-bold">{{ faq.question }}</h5>
-            <p class="card-text">{{ faq.answer|safe }}</p>
+            <h3 class="card-title font-weight-bold">{{ faq.question }}</h3>
+            <div class="card-text">{{ faq.answer|safe }}</div>
           </div>
         </div>
       {% empty %}
