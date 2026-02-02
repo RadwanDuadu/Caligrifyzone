@@ -23,7 +23,7 @@ class TestOrderLineItemSignals(TestCase):
             town_or_city='Dublin',
             street_address1='123 Street',
         )
-    
+
     def test_order_total_updates_on_lineitem_create(self):
         OrderLineItem.objects.create(
             order=self.order,

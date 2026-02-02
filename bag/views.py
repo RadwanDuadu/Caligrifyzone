@@ -159,7 +159,7 @@ def remove_from_bag(request, item_id):
     """ Remove the item from the shopping bag """
 
     product = get_object_or_404(Product, pk=item_id)
-    item_id = str(item_id)  
+    item_id = str(item_id)
 
     try:
         bag = request.session.get('bag', {})
