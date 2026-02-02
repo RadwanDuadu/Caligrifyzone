@@ -194,7 +194,7 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 
-    <script type="text/javascript">
+    <script >
         $('#deleteProductModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget);
             var deleteUrl = button.data('product-url');
