@@ -417,15 +417,15 @@ I have incorporated a newsletter sign-up form on my application, to allow users 
 
 **Custom Django Model Newsletter**
 
-    ```python
-    class NewsletterSubscriber(models.Model):
-    name = models.CharField(max_length=100)       # <- add this
-    email = models.EmailField(unique=True)
-    subscribed_on = models.DateTimeField(auto_now_add=True)
+```python
+class NewsletterSubscriber(models.Model):
+name = models.CharField(max_length=100)       # <- add this
+email = models.EmailField(unique=True)
+subscribed_on = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return f"{self.name} ({self.email})"
-    ```
+def __str__(self):
+    return f"{self.name} ({self.email})"
+```
 
 ## Testing
 
