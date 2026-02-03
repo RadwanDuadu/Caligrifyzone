@@ -132,6 +132,23 @@
         form.submit();
     });
 
+    $('.update-form').submit(function(e) {
+        var $input = $(this).find('.qty_input');
+        var max = parseInt($input.data('max'));
+        var current = parseInt($input.val());
+        if (current > max) {
+            alert(`Cannot exceed available stock (${max})`);
+            $input.val(max);
+            e.preventDefault();
+        }
+    });
+
+    $('.qty_input').on('input', function() {
+        var max = parseInt($(this).data('max'));
+        var val = parseInt($(this).val());
+        if (val > max) $(this).val(max);
+    });
+
     // Remove item (delegated binding)
     $(document).on('click', '.remove-item', function(e) {
         e.preventDefault();
