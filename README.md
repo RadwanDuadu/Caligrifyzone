@@ -194,7 +194,6 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 - **Product Recommendations**: Implement a "Customers who bought this also bought" or "You might also like" feature to suggest related products.
 - **Abandoned Cart Recovery**: Automatically send emails to users who add items to their cart but don't complete the purchase, offering discounts or reminders.
 - **Discount Codes and Vouchers**: Allow the admin to create discount codes or vouchers for promotions and marketing campaigns.
-- **Loyalty Program**: Introduce a points-based loyalty system where customers earn points for purchases, which can be redeemed for discounts.
 
 ## Tools & Technologies
 
@@ -411,6 +410,14 @@ Further links for future implementation:
 - [Managing your sitemaps and using sitemaps reports](https://support.google.com/webmasters/answer/7451001)
 - [Testing the robots.txt file](https://support.google.com/webmasters/answer/6062598)
 
+### Social Media Marketing
+
+Creating a strong social base (with participation) and linking that to the business site can help drive sales. Using more popular providers with a wider user base, such as Facebook, typically maximizes site views.
+
+I've created a mockup Facebook business account using the [Balsamiq template](https://code-institute-org.github.io/5P-Assessments-Handbook/files/Facebook_Mockups.zip) provided by Code Institute.
+
+![screenshot](documentation/mockup-facebook.png)
+
 ### Newsletter Marketing
 
 I have incorporated a newsletter sign-up form on my application, to allow users to supply their email address if they are interested in learning more. 
@@ -419,7 +426,7 @@ I have incorporated a newsletter sign-up form on my application, to allow users 
 
 ```python
 class NewsletterSubscriber(models.Model):
-name = models.CharField(max_length=100)       # <- add this
+name = models.CharField(max_length=100)       
 email = models.EmailField(unique=True)
 subscribed_on = models.DateTimeField(auto_now_add=True)
 
