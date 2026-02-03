@@ -5,6 +5,8 @@ from django.shortcuts import (
     HttpResponse,
     get_object_or_404)
 from django.contrib import messages
+from decimal import Decimal
+from django.conf import settings
 from products.models import Product
 
 
@@ -38,9 +40,15 @@ def view_bag(request):
                 })
 
     total = sum(item['product'].price * item['quantity'] for item in bag_items)
-    delivery = 0
-    grand_total = total
-    free_delivery_delta = 0
+
+    if total < settings.FREE_DELIVERY_THRESHOLD:
+        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
+    else:
+        delivery = 0
+        free_delivery_delta = 0
+
+    grand_total = delivery + total
 
     context = {
         'bag_items': bag_items,
