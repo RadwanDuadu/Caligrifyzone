@@ -14,20 +14,20 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | about | [about.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/about/templates/about/about.html) | [Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fabout) | ![screenshot](documentation/validation/html-about-about.png) | No errors |
 | about | [faq.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/about/templates/about/faq.html) | [Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fabout%2Ffaq) | ![screenshot](documentation/validation/html-about-faq.png) | No errors |
 | about | [newsletter.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/about/templates/about/newsletter.html) | [Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fabout%2Fnewsletter) | ![screenshot](documentation/validation/html-about-newsletter.png) | No errors |
-| bag | [bag.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/bag/templates/bag/bag.html) | [Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fbag) | ![screenshot](documentation/validation/html-bag-bag.png) | warning for addition of js script ignored as it doesn't effect implementation |
-| checkout | [checkout.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/checkout/templates/checkout/checkout.html) | [Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fcheckout) | ![screenshot](documentation/validation/html-checkout-checkout.png) | one model error due to use of h5 title element, this is not added by developer and not effecting overall functionality |
+| bag | [bag.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/bag/templates/bag/bag.html) | [Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fbag) | ![screenshot](documentation/validation/html-bag-bag.png) | No Errors |
+| checkout | [checkout.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/checkout/templates/checkout/checkout.html) | [Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fcheckout) | ![screenshot](documentation/validation/html-checkout-checkout.png) | No Errors|
 | checkout | [checkout_success.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/checkout/templates/checkout/checkout_success.html) | [Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fcheckout%2Fcheckout_success%2F2E88FEFA8BF442E190165C244422FFC7) | ![screenshot](documentation/validation/html-checkout-checkout_success.png) | No errors |
 | home | [index.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/home/templates/home/index.html) | [Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2F) | ![screenshot](documentation/validation/html-home-index.png) | No Errors |
 | products | [add_product.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/products/templates/products/add_product.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fproducts%2Fadd%2F) | ![screenshot](documentation/validation/html-products-add_product.png) | No errors |
 | products | [edit_product.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/products/templates/products/edit_product.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fproducts%2Fedit%2F1) | ![screenshot](documentation/validation/html-products-edit_product.png) | No errors|
-| products | [product_detail.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/products/templates/products/product_detail.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fproducts%2F1) | ![screenshot](documentation/validation/html-products-product_detail.png) | one model error due to use of h5 title element, this is not added by developer and not effecting overall functionality |
-| products | [products.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/products/templates/products/products.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fproducts) | ![screenshot](documentation/validation/html-products-products.png) | one model error due to use of h5 title element, this is not added by developer and not effecting overall functionality |
+| products | [product_detail.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/products/templates/products/product_detail.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fproducts%2F1) | ![screenshot](documentation/validation/html-products-product_detail.png) | No Errors |
+| products | [products.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/products/templates/products/products.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fproducts) | ![screenshot](documentation/validation/html-products-products.png) | No Errors |
 | profiles | [profile.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/profiles/templates/profiles/profile.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Fprofile) | ![screenshot](documentation/validation/html-profiles-profile.png) | No errors |
 | templates | [login.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/templates/allauth/account/login.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Faccounts%2Flogin) | ![screenshot](documentation/validation/html-login.png) | No Errors |
 | templates | [logout.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/templates/allauth/account/logout.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Faccounts%2Flogout) | ![screenshot](documentation/validation/html-logout.png) | No Errors |
 | templates | [signup.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/templates/allauth/account/signup.html) | [Link](https://validator.w3.org/nu/?level=warning&doc=https%3A%2F%2Fcaligrifyzone-90b1cd839db0.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/validation/html-signup.png) | No Errors |
 | templates | [404.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/templates/errors/404.html) | No Link | ![screenshot](documentation/validation/html-templates-404.png) | No errors |
-
+| templates | [500.html](https://github.com/RadwanDuadu/Caligrifyzone/blob/main/templates/errors/500.html) | No Link | ![screenshot](documentation/validation/html-templates-500.png) | No errors |
 
 ### CSS
 
@@ -136,6 +136,7 @@ I've tested my deployed project to check for responsiveness issues.
 | FAQs | ![screenshot](documentation/responsiveness/mobile-faq.png) | ![screenshot](documentation/responsiveness/tablet-faq.png) | ![screenshot](documentation/responsiveness/desktop-faq.png) | Works as expected |
 | Contact | ![screenshot](documentation/responsiveness/mobile-contact.png) | ![screenshot](documentation/responsiveness/tablet-contact.png) | ![screenshot](documentation/responsiveness/desktop-contact.png) | Works as expected |
 | 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
+| 500 | ![screenshot](documentation/responsiveness/mobile-500.png) | ![screenshot](documentation/responsiveness/tablet-500.png) | ![screenshot](documentation/responsiveness/desktop-500.png) | Works as expected |
 
 ## Browser Compatibility
 
@@ -159,6 +160,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Contact | ![screenshot](documentation/browsers/chrome-contact.png) | ![screenshot](documentation/browsers/firefox-contact.png) | ![screenshot](documentation/browsers/safari-contact.png) | Works as expected |
 | FAQs | ![screenshot](documentation/browsers/chrome-faq.png) | ![screenshot](documentation/browsers/firefox-faq.png) | ![screenshot](documentation/browsers/safari-faq.png) | Works as expected |
 | 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-404.png) | Works as expected |
+| 500 | ![screenshot](documentation/browsers/desktop-500.png) | ![screenshot](documentation/browsers/firefox-500.png) | ![screenshot](documentation/browsers/safari-500.png) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -209,6 +211,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | Contact | Feature is expected to allow users to learn more about the website and a form that allows to contact the website owner. | Submitted valid form submission to add new message that a contact request was submitted. | contact model and database is incrememnted on submission of contact form. | ![screenshot](documentation/defensive/contact.png) |
 | FAQs | Feature is expected to allow users to learn more about the most commonly asked questions | Page displays a list of most common questions | Page is displaying the most popular questions | ![screenshot](documentation/defensive/faq.png) |
 | 404 Error Page | Feature is expected to display a 404 error page for non-existent pages. | Navigated to an invalid URL (e.g., `/test`). | A custom 404 error page was displayed as expected. | ![screenshot](documentation/defensive/404.png) |
+| 500 Error Page | Feature is expected to display a 500 error page for internal error. | force a 500 error using git by forcing 500 error when going to (`/test-500`). | A custom 500 error page was displayed as expected. | ![screenshot](documentation/defensive/404.png) |
 
 ## User Story Testing
 
@@ -241,6 +244,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a site owner | I would like to manage product categories | so that I can ensure items are correctly organized and easy for customers to find. | ![screenshot](documentation/defensive/filtering.png) |
 | As a user | I would like to see a FAQ page | See most commonly asked questions | ![screenshot](documentation/features/faqs.png) |
 | As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/404.png) |
+| As an admin | I would like to see a 500 error page if I user observes a 500 error | so that it's obvious that this is unexpected internal error. | ![screenshot](documentation/features/desktop-500.png) |
 
 ## Automated Testing
 
@@ -300,6 +304,7 @@ Any remaining open issues can be tracked [here](https://www.github.com/RadwanDua
 | --- | --- |
 | The project is designed to be responsive from `375px` and upwards, in line with the material taught on the course LMS. Minor layout inconsistencies may occur on extra-wide (e.g. 4k/8k monitors), or smart-display devices (e.g. Nest Hub, Smart Watches, Gameboy Color, etc.), as these resolutions are outside the project’s scope, as taught by Code Institute. | ![screenshot](documentation/issues/poor-responsiveness.png) |
 | With a known order-number, users can brute-force "checkout_success.html" and see potentially sensitive information. | ![screenshot](documentation/issues/stripe-payment.png) |
+| The rating for products is not protected and an admin is able to add a rating greater then 5 stars | ![screenshot](documentation/issues/rating.png) |
 
 
 > [!IMPORTANT]  
