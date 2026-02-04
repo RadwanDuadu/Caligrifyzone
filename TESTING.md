@@ -184,6 +184,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | FAQs | ![screenshot](documentation/lighthouse/mobile-faq.png) | ![screenshot](documentation/lighthouse/desktop-faq.png) |
 | Contact | ![screenshot](documentation/lighthouse/mobile-contact.png) | ![screenshot](documentation/lighthouse/desktop-contact.png) |
 | 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
+| 500 | ![screenshot](documentation/lighthouse/mobile-500.png) | ![screenshot](documentation/lighthouse/desktop-500.png) |
 
 ## Defensive Programming
 
